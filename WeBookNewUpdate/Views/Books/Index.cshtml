@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WeBookNewUpdate.Controllers.Book>
+<link href="~/Content/Dis.css" rel="stylesheet" />
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="~/Content/Dis.css" rel="stylesheet" />
+}
+
+
+<table class="container">
+    <thead>
+
+    </thead>
+    <tbody>
+        <tr>
+            <td>  @Html.DisplayNameFor(model => model.Descrebtion)</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descrebtion)
+            @Html.ActionLink("Delete", "Delete", new { id = item.BookId })
+            @Html.ActionLink("Edit", "Edit", new { id = item.BookId }) |
+            
+        </td>
+    </tr>
+       
+
+
+
+    }
+        <tr>
+            <td><a class="btn btn-default" href="http://localhost:50419/Books/Create" style="margin-right:900px">Add book  &raquo;</a></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+
+
+
+
+
+           
+        
+
+
+      
+   
+
+

@@ -1,0 +1,29 @@
+﻿@model WeBookNewUpdate.Controllers.Book
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/Dis.css" rel="stylesheet" />
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+
+
+
+
+    <
+        @Html.DisplayNameFor(model => model.Descrebtion)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Descrebtion)
+    </dd>
+
+   
+
+
+
+@Html.ActionLink("Back to List", "Index")

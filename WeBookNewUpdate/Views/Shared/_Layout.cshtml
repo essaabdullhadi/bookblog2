@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - BookBlog</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <table class="container">
+        <thead>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td> @Html.ActionLink("BookBlog", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })</td>
+                <td>@Html.ActionLink("About", "About", "Home")</td>
+                <td> @Html.ActionLink("contect", "Contact", "Home")</td>
+                
+                <td>
+                <td>
+                   <a href="http://localhost:50419/Account/Register" class="btn btn-primary btn-lg">Register &raquo;</a>
+                </td>
+
+
+
+
+
+
+
+
+            </tr>
+            <tr>
+              
+            </tr>
+            <tr>
+    
+        </tbody>
+    </table>
+
+   
+        <div class="container">
+
+
+            
+
+            <div class="navbar-collapse collapse">
+               
+
+                @Html.Partial("_LoginPartial")
+            </div>
+
+        </div>
+ 
+
+   
+        @RenderBody()
+
+
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>
